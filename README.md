@@ -40,3 +40,18 @@ SELECT *
 FROM employee_salary
 WHERE salary > 70000;
 ```
+## 03 - GROUP BY & ORDER BY
+
+Topics Covered:
+
+- GROUP BY
+- AVG()
+- COUNT()
+- MIN()
+- MAX()
+- ORDER BY
+- ASC Sorting
+- DESC Sorting
+- Multiple Column Sorting
+
+Database Used: parks_and_recreation
