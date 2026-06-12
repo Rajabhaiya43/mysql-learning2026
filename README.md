@@ -58,18 +58,10 @@ Database Used: parks_and_recreation
 
 Example Queries:
 
+Examples:
+
+```sql
 SELECT gender, AVG(age), COUNT(age)
 FROM employee_demographics
 GROUP BY gender;
-
-SELECT occupation, AVG(salary), COUNT(salary)
-FROM employee_salary
-GROUP BY occupation;
-
-SELECT *
-FROM employee_salary
-ORDER BY dept_id;
-
-SELECT *
-FROM employee_demographics
-ORDER BY gender DESC, age ASC;
+```
