@@ -1,3 +1,34 @@
+<h1 align="center"> | MySQL Learning |</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/MySQL-Database-blue?style=for-the-badge&logo=mysql">
+  <img src="https://img.shields.io/badge/Data-Analytics-green?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Learning-In%20Progress-orange?style=for-the-badge">
+</p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=mysql,github,vscode" />
+</p>
+
+<p align="center">
+  SQL Practice Repository • MySQL Workbench • Data Analytics Journey
+</p>
+
+<p align="center">
+  📅 Started: June 2026 &nbsp;&nbsp;|&nbsp;&nbsp;
+  👨‍💻 Author: Shivam Upadhayay &nbsp;&nbsp;|&nbsp;&nbsp;
+  🎯 Goal: Data Analytics
+</p>
+
+---
+
+## 📊 Repository Stats
+
+![GitHub repo size](https://img.shields.io/github/repo-size/Rajabhaiya43/mysql-learning-project?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/Rajabhaiya43/mysql-learning-project?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/Rajabhaiya43/mysql-learning-project?style=flat-square)
+
+---
 # 01 - SELECT Statement
 
 ## Topics Covered
