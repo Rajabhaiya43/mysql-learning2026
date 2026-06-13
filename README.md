@@ -121,3 +121,23 @@ FROM employee_salary
 GROUP BY occupation
 HAVING AVG_slr > 80000;
 ```
+## 05 - INSERT, UPDATE & DELETE
+
+Topics Covered:
+
+- INSERT INTO
+- Multiple Row Insert
+- UPDATE Statement
+- DELETE Statement
+- WHERE Clause with UPDATE
+- WHERE Clause with DELETE
+
+Database Used: parks_and_recreation
+
+Examples:
+```
+
+```sql
+DELETE FROM employee_demographics
+WHERE employee_id = 15;
+```
