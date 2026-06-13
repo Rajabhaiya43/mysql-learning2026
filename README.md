@@ -65,3 +65,28 @@ SELECT gender, AVG(age), COUNT(age)
 FROM employee_demographics
 GROUP BY gender;
 ```
+## 04 - HAVING, LIMIT & ALIASING
+
+Topics Covered:
+
+- HAVING Clause
+- LIMIT
+- OFFSET using LIMIT
+- Column Aliasing (AS)
+- Filtering Aggregated Data
+
+Database Used: parks_and_recreation
+
+Examples:
+```sql
+SELECT *
+FROM employee_salary
+LIMIT 3, 5;
+```
+
+```sql
+SELECT occupation, AVG(salary) AS AVG_slr
+FROM employee_salary
+GROUP BY occupation
+HAVING AVG_slr > 80000;
+```
