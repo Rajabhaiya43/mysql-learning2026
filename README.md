@@ -164,3 +164,25 @@ ON ed.employee_id = es.employee_id
 INNER JOIN parks_departments AS pd
 ON es.dept_id = pd.department_id;
 ```
+## 07 - UNION
+
+Topics Covered:
+
+- UNION Operator
+- Combining Result Sets
+- Removing Duplicate Records
+- UNION with Conditions
+- ORDER BY with UNION
+- Column Aliasing
+
+Database Used: parks_and_recreation
+
+Examples:
+
+```sql
+SELECT *
+FROM employee_demographics
+UNION
+SELECT *
+FROM employee_salary;
+```
