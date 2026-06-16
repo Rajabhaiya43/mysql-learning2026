@@ -186,3 +186,56 @@ UNION
 SELECT *
 FROM employee_salary;
 ```
+## 08 - UNION & STRING FUNCTIONS
+
+Topics Covered:
+
+- UNION
+- LENGTH()
+- UPPER()
+- LOWER()
+- LEFT()
+- RIGHT()
+- SUBSTRING()
+- REPLACE()
+- CONCAT()
+- LOCATE()
+
+Database Used: parks_and_recreation
+
+Examples:
+
+```sql
+SELECT employee_id, first_name, age AS value_IS
+FROM employee_demographics
+WHERE age > 40
+UNION
+SELECT employee_id, first_name, salary AS value_IS
+FROM employee_salary
+WHERE salary > 70000
+ORDER BY first_name;
+```
+
+```sql
+SELECT first_name, LENGTH(first_name) AS SIZE
+FROM employee_demographics
+ORDER BY LENGTH(first_name);
+```
+
+```sql
+SELECT first_name,
+UPPER(first_name) AS Ucase,
+LOWER(first_name) AS Lcase
+FROM employee_demographics;
+```
+
+```sql
+SELECT first_name, REPLACE(first_name, 'A', 'S') AS Replace_Char
+FROM employee_demographics;
+```
+
+```sql
+SELECT first_name, last_name,
+CONCAT(first_name, ' ', last_name) AS Full_Name
+FROM employee_demographics;
+```
