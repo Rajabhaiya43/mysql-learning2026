@@ -222,4 +222,48 @@ UPPER(first_name) AS Ucase,
 LOWER(first_name) AS Lcase
 FROM employee_demographics;
 ```
+## 08 - CASE STATEMENTS
 
+Topics Covered:
+
+- CASE Statement
+- Conditional Logic
+- Categorizing Data
+- Salary Increment Calculation
+- Bonus Calculation
+- Multiple Conditions using CASE
+
+Database Used: parks_and_recreation
+
+Examples:
+
+```sql
+SELECT CONCAT(first_name,last_name) AS full_name,
+       age,
+       birth_date,
+CASE
+    WHEN age < 18 THEN 'TEEN'
+    WHEN age < 24 AND age > 18 THEN 'YOUNG'
+    WHEN age < 50 AND age > 24 THEN 'OLD'
+    WHEN age > 50 THEN 'NEAR DEATH'
+END AS age_catg
+FROM employee_demographics
+ORDER BY age;
+```
+
+```sql
+SELECT CONCAT(first_name,last_name) AS full_name,
+       salary,
+       dept_id,
+CASE
+    WHEN salary <= 60000 THEN salary * 1.10
+    WHEN salary <= 70000 THEN salary * 1.07
+    WHEN salary <= 75000 THEN salary * 1.05
+    WHEN salary > 75000 THEN salary * 1
+END AS NEW_SALARY,
+CASE
+    WHEN dept_id = 6 THEN salary * 0.1
+    ELSE 0
+END AS BOUNSE
+FROM employee_salary;
+```
