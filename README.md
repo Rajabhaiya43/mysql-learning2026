@@ -300,3 +300,38 @@ SELECT first_name, occupation, salary,
 )
 FROM employee_salary;
 ```
+## 10 - WINDOW FUNCTIONS
+
+Topics Covered:
+
+- OVER()
+- PARTITION BY
+- ROW_NUMBER()
+- RANK()
+- DENSE_RANK()
+- Rolling Calculations
+
+Database Used: parks_and_recreation
+
+Examples:
+
+```sql
+SELECT CONCAT(dem.first_name,' ',dem.last_name) AS full_name,
+       age,
+       AVG(salary)
+       OVER(PARTITION BY gender)
+FROM employee_demographics AS dem
+JOIN employee_salary AS sal
+ON dem.employee_id = sal.employee_id;
+```
+
+```sql
+SELECT CONCAT(dem.first_name,' ',dem.last_name) AS full_name,
+       gender,
+       age,
+       salary,
+       DENSE_RANK() OVER(PARTITION BY gender ORDER BY salary DESC) AS RANK_NUMBER
+FROM employee_demographics AS dem
+JOIN employee_salary AS sal
+ON dem.employee_id = sal.employee_id;
+```
