@@ -335,3 +335,43 @@ FROM employee_demographics AS dem
 JOIN employee_salary AS sal
 ON dem.employee_id = sal.employee_id;
 ```
+## 11 - CTEs & Temporary Tables
+
+Topics Covered:
+
+- Common Table Expressions (CTEs)
+- WITH Clause
+- Temporary Tables
+- CREATE TEMPORARY TABLE
+- Temporary Data Storage
+
+Database Used: parks_and_recreation
+
+Examples:
+
+```sql
+WITH CTE_Example AS
+(
+    SELECT gender,
+           AVG(salary),
+           MAX(salary),
+           MIN(salary),
+           COUNT(salary)
+    FROM employee_demographics AS DEM
+    JOIN employee_salary AS SAL
+    ON DEM.employee_id = SAL.employee_id
+    GROUP BY gender
+)
+SELECT *
+FROM CTE_Example;
+```
+
+```sql
+CREATE TEMPORARY TABLE salary_over_50k
+SELECT *
+FROM employee_salary
+WHERE salary > 50000;
+
+SELECT *
+FROM salary_over_50k;
+```
