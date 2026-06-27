@@ -416,8 +416,8 @@ Topics Covered:
 - AFTER INSERT Trigger
 - NEW Keyword
 - CREATE EVENT
-- Scheduled Events
-- Automated INSERT, UPDATE & DELETE
+- Scheduled Database Events
+- Automated INSERT, UPDATE & DELETE Operations
 
 Database Used: parks_and_recreation
 
@@ -442,9 +442,4 @@ BEGIN
     SET salary = salary + 10000
     WHERE salary < 30000;
 END;
-```
-
-DELIMITER ;
-
-CALL FILTER_SALARY_via_NAME(07);
 ```
