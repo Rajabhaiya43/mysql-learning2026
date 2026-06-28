@@ -170,5 +170,72 @@ AND percentage_laid_off IS NULL;
 
 -- CHECKING FOR MISSINGB OR BLANK DATA 
 
+SELECT DISTINCT industry
+FROM NO_DUP_DATA;
+
+SELECT *
+FROM NO_DUP_DATA
+WHERE industry IS NULL OR industry = '';
+ #1ST WAY  TO  UPADTE BLANK DATA 
+SELECT *
+FROM NO_DUP_DATA
+WHERE company  = 'Airbnb'OR 
+      company  = 'Bally`s Interactive' OR
+      company  = 'Carvana' OR
+      company  = 'Juul';
+      
+UPDATE NO_DUP_DATA
+SET industry = 'Travel'
+WHERE company = 'Airbnb';
+UPDATE NO_DUP_DATA
+SET industry = 'Transportation'
+WHERE company = 'Carvana';
+UPDATE NO_DUP_DATA
+SET industry = 'Consumer'
+WHERE company = 'Juul';
+
+#2ND WAY TO UPDATE DATA 
+
+SELECT *
+FROM NO_DUP_DATA T1
+JOIN NO_DUP_DATA T2
+ON T1.company = T2.company
+WHERE T1.industry IS NULL
+AND T2.industry IS NOT NULL;
+
+
+UPDATE  NO_DUP_DATA T1
+JOIN NO_DUP_DATA T2
+ON T1.company = T2.company
+SET T1.industry = T2.industry
+WHERE T1.industry IS NULL
+AND T2.industry IS NOT NULL;
+
+
+
+SELECT * 
+FROM NO_DUP_DATA
+WHERE  total_laid_off IS NULL
+AND percentage_laid_off IS NULL;
+
+-- DELETE THE UNWNATED DATA WITH NO MEANING
+
+DELETE
+FROM NO_DUP_DATA
+WHERE  total_laid_off IS NULL
+AND percentage_laid_off IS NULL;
+
+-- DELETE THE UNWANTED COLUMN 
+
+ALTER TABLE NO_DUP_DATA
+DROP COLUMN row_id;
+
+-- FINAL TABLE AFTER PERFOMING DATA CLEANING
+
+SELECT * 
+FROM NO_DUP_DATA;
+
+
+
 
 
