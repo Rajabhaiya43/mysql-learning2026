@@ -84,13 +84,13 @@ The dataset contained duplicate records, inconsistent values, blank fields and i
 
 ## 🗂 Raw Dataset
 
-![Raw Dataset](raw_data.png.png)
+![Raw Dataset](raw_data.png)
 
 ---
 
 ## ✅ Cleaned Dataset
 
-![Cleaned Dataset](cleaned_data.png.png)
+![Cleaned Dataset](cleaned_data.png)
 
 ---
 
