@@ -1,145 +1,78 @@
 <div align="center">
 
-# 🧹 SQL Data Cleaning Project
+# 📂 SQL Projects Portfolio
 
-### End-to-End Data Cleaning using MySQL
+### Real-World SQL Projects for Data Analytics
 
-<img src="https://img.shields.io/badge/MySQL-Database-blue?style=for-the-badge&logo=mysql">
-<img src="https://img.shields.io/badge/Project-Data%20Cleaning-success?style=for-the-badge">
-<img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge">
+<img src="https://img.shields.io/badge/MySQL-Projects-blue?style=for-the-badge&logo=mysql">
+<img src="https://img.shields.io/badge/Data-Analytics-success?style=for-the-badge">
+<img src="https://img.shields.io/badge/Status-Building-orange?style=for-the-badge">
 
 <br>
 
-Transforming raw company layoff data into a clean, standardized and analysis-ready dataset using SQL.
+A collection of real-world SQL projects completed during my Data Analytics learning journey.
 
 </div>
 
 ---
 
-# 📖 Project Overview
+# 📖 About
 
-This project demonstrates a complete SQL Data Cleaning workflow using MySQL.
+This repository contains practical SQL projects focused on solving real-world data problems.
 
-The dataset contained duplicate records, inconsistent values, blank fields and incorrect date formats. The objective was to clean the dataset and prepare it for further Exploratory Data Analysis (EDA).
-
----
-
-# 📂 Dataset
-
-**Dataset Used:** `Company_Fund.csv`
+Each project demonstrates different SQL concepts such as Data Cleaning, Exploratory Data Analysis (EDA), Window Functions, CTEs, Joins, Stored Procedures, Triggers, and more.
 
 ---
 
-# 🎯 Objectives
+# 🚀 Projects
 
-- ✅ Remove Duplicate Records
-- ✅ Standardize Company & Industry Names
-- ✅ Handle NULL & Blank Values
-- ✅ Convert Date Format
-- ✅ Remove Unnecessary Records
-- ✅ Remove Helper Columns
-- ✅ Prepare Clean Dataset for Analysis
+| No. | Project | Description | Status |
+|:--:|:---------|:------------|:------:|
+| 01 | 🧹 SQL Data Cleaning | Cleaned raw layoff dataset using MySQL | ✅ Completed |
 
 ---
 
-# 🛠 Technologies Used
+# 🛠 Skills Demonstrated
 
-- MySQL Workbench
-- SQL
+- SQL Queries
+- Data Cleaning
+- Exploratory Data Analysis
+- Joins
+- Subqueries
 - Window Functions
 - CTEs
-- Data Cleaning Techniques
+- Temporary Tables
+- Stored Procedures
+- Triggers
+- Events
+- Aggregate Functions
 
 ---
 
-# 📚 SQL Concepts Used
+# 📂 Folder Structure
 
-- ROW_NUMBER()
-- CTE (WITH)
-- TRIM()
-- STR_TO_DATE()
-- UPDATE
-- DELETE
-- ALTER TABLE
-- JOIN
-- Window Functions
-
----
-
-# 🔄 Data Cleaning Workflow
-
-1. Created a clone of the original table.
-2. Identified duplicate records using `ROW_NUMBER()`.
-3. Removed duplicate rows.
-4. Standardized company, industry and country values.
-5. Converted text dates into MySQL DATE format.
-6. Filled missing industry values.
-7. Removed unnecessary NULL records.
-8. Dropped helper columns.
-9. Generated the final cleaned dataset.
-
----
-
-# 📸 Project Output
-
-## 🗂 Raw Dataset
-
-![Raw Dataset](raw_data.png.png)
-
----
-
-## ✅ Cleaned Dataset
-
-![Cleaned Dataset](cleaned_data.png.png)
-
----
-
-# 📊 Final Result
-
-✔ Duplicate records removed
-
-✔ Company names standardized
-
-✔ Industry values cleaned
-
-✔ Country names standardized
-
-✔ Dates converted to DATE datatype
-
-✔ NULL & Blank values handled
-
-✔ Analysis-ready dataset created
-
----
-
-# 📁 Project Structure
-
-```
-SQL_DATA_CLEANING/
+```text
+Projects/
 │
-├── Company_Fund.csv
-├── SQL_DATA_CLEANING.sql
-├── raw_data.png
-├── cleaned_data.png
+├── SQL_DATA_CLEANING/
+├── SQL_EDA/
 └── README.md
 ```
 
 ---
 
-# 🚀 Project Status
+# 🎯 Goal
 
-🟢 **Completed**
+Build a complete SQL portfolio showcasing practical projects used in real-world Data Analytics.
 
 ---
 
 <div align="center">
 
-## 👨‍💻 Author
-
-### Shivam Upadhayay
+### 👨‍💻 Shivam Upadhayay
 
 **B.Tech AI & DS | Aspiring Data Analyst**
 
-⭐ If you found this project helpful, don't forget to star the repository.
+⭐ More projects will be added regularly.
 
 </div>
