@@ -2,15 +2,15 @@
 
 # 📊 SQL Exploratory Data Analysis
 
-### Exploring Global Layoffs Data using MySQL
+### Business Insights from the Global Layoffs Dataset using MySQL
 
 <img src="https://img.shields.io/badge/MySQL-Database-blue?style=for-the-badge&logo=mysql">
-<img src="https://img.shields.io/badge/Project-EDA-success?style=for-the-badge">
-<img src="https://img.shields.io/badge/Status-Work%20In%20Progress-orange?style=for-the-badge">
+<img src="https://img.shields.io/badge/EDA-Project-success?style=for-the-badge">
+<img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge">
 
 <br>
 
-Turning cleaned data into meaningful business insights using SQL.
+Transforming raw layoff data into meaningful business insights using SQL.
 
 </div>
 
@@ -18,130 +18,137 @@ Turning cleaned data into meaningful business insights using SQL.
 
 # 📖 Project Overview
 
-This project performs Exploratory Data Analysis (EDA) on the cleaned Global Layoffs dataset using MySQL.
+This project performs **Exploratory Data Analysis (EDA)** on the cleaned **Global Layoffs Dataset** using **MySQL**.
 
-The objective is to discover business trends, identify layoff patterns, and generate meaningful insights across companies, industries, countries, and time periods.
-
----
-
-# 📂 Dataset
-
-**Dataset Used**
-
-- Company_Fund.csv *(Cleaned Dataset)*
+The analysis focuses on discovering business insights by analyzing layoffs across companies, countries, industries, and time periods using SQL queries and advanced analytical techniques.
 
 ---
 
 # 🎯 Objectives
 
-- Analyze company-wise layoffs
-- Analyze industry-wise layoffs
-- Analyze country-wise layoffs
-- Identify monthly & yearly trends
-- Generate business insights using SQL
+- 🏢 Company-wise Layoff Analysis
+- 🌍 Country-wise Layoff Analysis
+- 📅 Monthly Layoff Trends
+- 📈 Rolling Monthly Layoffs
+- 🏆 Top 5 Companies by Year
+- 💡 Generate Business Insights using SQL
 
 ---
 
-# 🛠 Technologies Used
+# 🛠 Tech Stack
 
+- MySQL
 - MySQL Workbench
 - SQL
 - Aggregate Functions
-- GROUP BY
-- ORDER BY
-- Date Functions
+- Window Functions
+- Common Table Expressions (CTEs)
 
 ---
 
 # 📚 SQL Concepts Used
 
+- GROUP BY
+- ORDER BY
+- Aggregate Functions
+- Window Functions
+- CTEs
 - SUM()
 - AVG()
 - MAX()
 - MIN()
-- GROUP BY
-- ORDER BY
 - MONTH()
 - YEAR()
-- Aggregate Functions
+- DENSE_RANK()
 
 ---
 
-# 📈 Analysis Completed
+# 📊 Project Outputs
 
-- ✅ Summary Statistics
-- ✅ Company-wise Analysis
-- ✅ Industry-wise Analysis
-- ✅ Country-wise Analysis
-- ✅ Date-wise Analysis
-- ✅ Monthly Trends
-- ✅ Yearly Trends
+## 🏢 Company-wise Layoffs
+
+<p align="center">
+<img src="SUM_OF_TLO_COMPANYWISE.png" width="95%">
+</p>
 
 ---
 
-# 🚧 Upcoming Analysis
+## 🌍 Country-wise Layoffs
 
-- 🔄 Stage-wise Layoffs
-- 🔄 Funding vs Layoffs
-- 🔄 Rolling Monthly Layoffs
-- 🔄 Top Companies by Year
-- 🔄 Advanced Business Insights
+<p align="center">
+<img src="SUM_OF_TLO_COUNTRYWISE.png" width="95%">
+</p>
 
 ---
 
-# 📸 Project Output
+## 📈 Rolling Monthly Layoffs
 
-## 📊 Summary Statistics
-
-*(Add Screenshot Here)*
-
----
-
-## 🏢 Company-wise Analysis
-
-*(Add Screenshot Here)*
+<p align="center">
+<img src="ROLLING_OFF_MONTHLY.png" width="95%">
+</p>
 
 ---
 
-## 🌍 Country-wise Analysis
+## 🏢 Loft Monthly Layoffs
 
-*(Add Screenshot Here)*
-
----
-
-## 📅 Monthly Trend
-
-*(Add Screenshot Here)*
+<p align="center">
+<img src="LOFT_MONTHLY_LAYOFF.png" width="95%">
+</p>
 
 ---
 
-# 📁 Project Structure
+## 🏆 Top 5 Companies by Year
+
+<p align="center">
+<img src="TOP_5_COMPANY.png" width="95%">
+</p>
+
+---
+
+# 💡 Key Insights
+
+- Amazon recorded the highest total layoffs.
+- Google ranked second in total layoffs.
+- United States experienced the highest layoffs globally.
+- India ranked second among all countries.
+- January recorded the highest monthly layoffs.
+- 2022 experienced the highest layoffs across the dataset.
+- Rolling monthly analysis highlights the cumulative impact of layoffs over time.
+- Year-wise company rankings identify the organizations with the largest workforce reductions.
+
+---
+
+# 📂 Project Structure
 
 ```text
 02_SQL_EXPLORATORY_DATA_ANALYSIS/
 │
 ├── SQL_EXPLORATORY_DATA_ANALYSIS.sql
 ├── Company_Fund.csv
-├── README.md
-└── screenshots/
+├── SUM_OF_TLO_COMPANYWISE.png
+├── SUM_OF_TLO_COUNTRYWISE.png
+├── ROLLING_OFF_MONTHLY.png
+├── LOFT_MONTHLY_LAYOFF.png
+├── TOP_5_COMPANY.png
+└── README.md
 ```
 
 ---
 
 # 🚀 Project Status
 
-🟠 **Work In Progress**
-
-More business insights will be added soon.
+🟢 **Completed**
 
 ---
 
 <div align="center">
 
-## 👨‍💻 Shivam Upadhayay
+### 👨‍💻 Shivam Upadhayay
 
-**B.Tech AI & DS | Aspiring Data Analyst**
+**B.Tech Artificial Intelligence & Data Science**
 
-⭐ Thanks for visiting this project.
+**Aspiring Data Analyst**
+
+⭐ *More real-world SQL projects coming soon.*
 
 </div>
