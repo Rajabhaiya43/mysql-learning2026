@@ -32,7 +32,7 @@ FROM NO_DUP_DATA
 WHERE percentage_laid_off = 1
 ORDER BY funds_raised_millions DESC ;
 
--- FINDING SUM OF TLO COMPANY WISE BY GROUPING THEM ALL
+-- FINDING SUM OF TOTAL LAYOFF'S COMPANY WISE
 
 SELECT company, SUM(total_laid_off) sum_TLO
 FROM NO_DUP_DATA
@@ -120,6 +120,94 @@ ORDER BY sum_TLO DESC;
 -- i.e. MAY BE 2023 IS MAKE MORE LAYOFF OF PEOPLE AS COMPARE TO 2022
 
 
+-- ROLLING OFF LAYOFF'S MONTHLY
+
+SELECT SUBSTRING(`date`,1,7) AS Monthly , SUM(total_laid_off) AS TLO
+FROM NO_DUP_DATA 
+WHERE SUBSTRING(`date`,1,7) IS NOT NULL
+GROUP BY SUBSTRING(`date`,1,7)
+ORDER BY 1 ASC;
+
+WITH Monthly_layoff AS
+(
+SELECT SUBSTRING(`date`,1,7) AS Monthly , SUM(total_laid_off) AS TLO
+FROM NO_DUP_DATA
+WHERE SUBSTRING(`date`,1,7) IS NOT NULL
+GROUP BY SUBSTRING(`date`,1,7)
+ORDER BY 1 ASC 
+)
+SELECT Monthly, TLO,
+SUM(TLO)
+OVER (ORDER BY Monthly) AS rolling_total
+FROM Monthly_layoff;
+
+-- COUNT OF COMPANY i.e. COC
+
+SELECT company, COUNT(company) AS COC
+FROM NO_DUP_DATA
+GROUP BY company
+ORDER BY COC DESC;
+
+--  COMNPANY MONTHLY LAYOFFS (AMAZON)
+
+SELECT SUBSTRING(`date`,1,7) AS Monthly, company, SUM(total_laid_off)
+FROM NO_DUP_DATA
+WHERE company = 'Amazon'
+GROUP BY Monthly
+ORDER BY 1 ASC;
+
+WITH Amazon_layoff_Monthly AS
+(
+SELECT SUBSTRING(`date`,1,7) AS Monthly, company, SUM(total_laid_off) AS TLO
+FROM NO_DUP_DATA
+WHERE company = 'Amazon'
+GROUP BY Monthly
+ORDER BY 1 ASC
+)
+SELECT company, Monthly, TLO , SUM(TLO) OVER (ORDER BY Monthly) AS Monthly_layoff
+FROM Amazon_layoff_Monthly;
+
+--  COMNPANY MONTHLY LAYOFFS (LOFT)
+
+SELECT SUBSTRING(`date`,1,7) AS Monthly, company, SUM(total_laid_off)
+FROM NO_DUP_DATA
+WHERE company = 'Loft'
+GROUP BY Monthly
+ORDER BY 1 ASC;
+
+WITH Loft_layoff_Monthly AS
+(
+SELECT SUBSTRING(`date`,1,7) AS Monthly, company, SUM(total_laid_off) AS TLO
+FROM NO_DUP_DATA
+WHERE company = 'Loft'
+GROUP BY Monthly
+ORDER BY 1 ASC
+)
+SELECT company, Monthly, TLO , SUM(TLO) OVER (ORDER BY Monthly) AS Monthly_layoff
+FROM Loft_layoff_Monthly;
 
 
+-- RANKING THE TOP 5 COMPANY 
+
+SELECT company, YEAR(`date`) AS YEAR_ , SUM(total_laid_Off) AS TLO
+FROM NO_DUP_DATA
+GROUP BY company, YEAR_
+ORDER BY TLO DESC;
+
+WITH Company_Ranking AS
+(
+SELECT company, YEAR(`date`) AS YEAR_ , SUM(total_laid_Off) AS TLO
+FROM NO_DUP_DATA
+GROUP BY company, YEAR_
+ORDER BY TLO DESC
+),
+ COMPANY_RANKING_YEARWISE AS 
+(
+SELECT *, DENSE_RANK() OVER (PARTITION BY YEAR_ ORDER BY TLO DESC) AS Ranking
+FROM Company_Ranking
+WHERE YEAR_ IS NOT NULL 
+)
+SELECT *
+FROM COMPANY_RANKING_YEARWISE
+WHERE Ranking  <= 5;
 
